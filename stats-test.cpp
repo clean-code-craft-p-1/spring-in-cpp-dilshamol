@@ -17,9 +17,9 @@ TEST(Statistics, AverageNaNForEmpty)
 {
 	auto computedStats = Statistics::ComputeStatistics({});
 
-	EXPECT_TRUE(isnan(computedStats.average));
-	EXPECT_TRUE(isnan(computedStats.maximum));
-	EXPECT_TRUE(isnan(computedStats.minimum));
+	EXPECT_TRUE(std::isnan(computedStats.average));
+	EXPECT_TRUE(std::isnan(computedStats.maximum));
+	EXPECT_TRUE(std::isnan(computedStats.minimum));
 }
 
 TEST(Alert, AlertsWhenMaxExceeds)
