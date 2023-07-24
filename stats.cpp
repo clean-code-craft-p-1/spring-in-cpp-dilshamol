@@ -2,7 +2,8 @@
 #include "stats.h"
 #include <vector>
 #include <algorithm>
-
+#include <limits>
+#define CUSTOM_NAN (std::numeric_limits<double>::quiet_NaN())
 
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
 {
@@ -10,9 +11,9 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
 	Statistics::Stats stats;
 	if (data.empty())
 	{
-		stats.average = nanf("");
-		stats.maximum = nanf("");
-		stats.minimum = nanf("");
+		stats.average = CUSTOM_NAN;
+		stats.maximum = CUSTOM_NAN;
+		stats.minimum = CUSTOM_NAN;
 	}
 	else
 	{
