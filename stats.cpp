@@ -10,9 +10,9 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
 	Statistics::Stats stats;
 	if (data.empty())
 	{
-		stats.average = std::nanf("");
-		stats.maximum = std::nanf("");
-		stats.minimum = std::nanf("");
+		stats.average = nanf("");
+		stats.maximum = nanf("");
+		stats.minimum = nanf("");
 	}
 	else
 	{
