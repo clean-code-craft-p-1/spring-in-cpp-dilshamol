@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "pch.h"
+
 
 namespace Statistics {
     // define the Stats structure here. See the tests to infer its properties
